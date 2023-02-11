@@ -1,0 +1,7 @@
+---
+default_shell: /bin/zsh
+homebrew_formulas: []
+homebrew_taps: []
+homebrew_casks: [ homebrew/cask ]
+dotfiles: []
+sdkman_sdks: []

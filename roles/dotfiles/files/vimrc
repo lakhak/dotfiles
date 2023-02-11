@@ -1,0 +1,78 @@
+syntax on
+filetype plugin indent on
+
+packadd! edge
+
+set backspace=indent,eol,start
+set nofoldenable
+
+" set theme
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+
+let g:edge_style = 'neon'
+let g:edge_better_performance = 1
+let g:edge_diagnostic_line_highlight = 1
+let g:airline_theme = 'edge'
+
+colorscheme edge
+
+set ttimeoutlen=100 " reduce delay (ms) when switching modes
+
+" set cursor shape
+if exists ('$TMUX')
+  let &t_SI = "\<Esc>[6 q"
+  let &t_SR = "\<Esc>[4 q"
+  let &t_EI = "\<Esc>[2 q"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
+" toggle hybrid line numbers https://jeffkreeftmeijer.com/vim-number/
+set number
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
+:augroup END
+
+" Custom commands
+:command Glog :Git log --oneline --decorate --graph
+
+" FZF
+set rtp+=/usr/local/opt/fzf
+nnoremap <C-p>o :FZF<CR>
+nnoremap <C-p>w :Windows<CR>
+nnoremap <C-p>: :History:<CR>
+nnoremap <C-p>/ :History/<CR>
+nnoremap <C-p>g :Rg<CR>
+nnoremap <C-p>* :Rg <C-r><C-w><CR>
+
+" NERDTree
+map <C-g> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=40
+
+" YouCompleteMe
+nnoremap <leader>D :YcmCompleter GetDoc<CR>
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+
+" vim-visual-multi
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"] = '<C-j>'
+let g:VM_maps["Add Cursor Up"]   = '<C-k>'
+
+" vim-easymotion
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+map <Leader>f <Plug>(easymotion-f)
+map <Leader>b <Plug>(easymotion-b)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+

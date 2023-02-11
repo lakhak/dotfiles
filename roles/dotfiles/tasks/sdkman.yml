@@ -1,0 +1,10 @@
+---
+- name: Install sdks with sdkman
+  shell: >-
+    . {{ lookup('env', 'SDKMAN_DIR') }}/bin/sdkman-init.sh &&
+    sdk install {{ item.sdk }} {{ item.version }}
+  with_items: "{{ sdkman_sdks }}"
+  when: lookup('env', 'SDKMAN_DIR') is defined
+  register: sdkman_install
+  changed_when: "'is already installed' not in sdkman_install.stdout"
+

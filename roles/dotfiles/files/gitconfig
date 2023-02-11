@@ -1,0 +1,14 @@
+[user]
+	name = lakhak
+	email = lakhak@users.noreply.github.com
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = no
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = no

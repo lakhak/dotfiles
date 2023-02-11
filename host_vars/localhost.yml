@@ -1,0 +1,54 @@
+---
+default_shell: /usr/local/bin/zsh
+
+homebrew_formulas:
+  - awscli
+  - colima
+  - docker
+  - docker-credential-helper
+  - fzf
+  - gpgme
+  - jq
+  - node@14
+  - pandoc
+  - pass
+  - pwgen
+  - ripgrep
+  - tmux
+  - vim
+  - wget
+  - zsh
+
+homebrew_taps:
+  - homebrew/cask
+  - homebrew/cask-fonts
+
+homebrew_casks:
+  - alacritty
+  - basictex
+  - font-jetbrains-mono
+  - little-snitch
+  - macfuse
+  - micro-snitch
+  - rectangle
+  - tex-live-utility
+  - veracrypt
+
+dotfiles:
+  - { src: alacritty, dest: config/alacritty }
+  - { src: gitconfig }
+  - { src: gitignore_global }
+  - { src: ideavimrc }
+  - { src: tmux.conf }
+  - { src: vim }
+  - { src: vimrc }
+  - { src: zshrc }
+
+sdkman_sdks:
+  - { sdk: java, version: 8.0.352-tem }
+  - { sdk: java, version: 11.0.17-tem }
+  - { sdk: java, version: 17.0.5-tem }
+  - { sdk: maven, version: 3.6.3 }
+  - { sdk: sbt, version: 1.4.7 }
+  - { sdk: visualvm, version: 2.1.2 }
+

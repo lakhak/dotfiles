@@ -1,0 +1,49 @@
+"" Source your .vimrc
+""" source ~/.vimrc
+
+""" Plugins
+set surround
+set commentary
+set easymotion
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+set number
+set rnu
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+""" Plugin settings
+map <leader>s <Plug>(easymotion-s1)
+map <leader>l <Plug>(easymotion-sl)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+map <leader>r <Action>(Run)
+map <leader>R <Action>(RunClass)
+map <leader>d <Action>(Debug)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+nmap <C-n> <Action>(SelectNextOccurrence)
+xmap <C-n> <Action>(SelectNextOccurrence)
+nmap <C-x> <Action>(FindNext)
+xmap <C-x> <Action>(FindNext)
+nmap <C-p> <Action>(UnselectPreviousOccurrence)
+xmap <C-p> <Action>(UnselectPreviousOccurrence)
+nmap <leader><C-n> <Action>(SelectAllOccurrences)
+xmap <leader><C-n> <Action>(SelectAllOccurrences)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+

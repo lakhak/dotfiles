@@ -1,0 +1,51 @@
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-fugitive"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-surround"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-commentary"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/nerdtree"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/fzf.vim"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/goyo.vim"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-easymotion"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-closetag"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-yaml-folds"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-yaml-folds
+	url = https://github.com/pedrohdz/vim-yaml-folds.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-visual-multi"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-airline"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/opt/YouCompleteMe"]
+	path = roles/dotfiles/files/vim/pack/vendor/opt/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "roles/dotfiles/files/vim/pack/colors/opt/edge"]
+	path = roles/dotfiles/files/vim/pack/colors/opt/edge
+	url = https://github.com/sainnhe/edge.git
+[submodule "roles/dotfiles/files/vim/pack/colors/opt/vim-colors-solarized"]
+	path = roles/dotfiles/files/vim/pack/colors/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/opt/typescript-vim"]
+	path = roles/dotfiles/files/vim/pack/vendor/opt/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/opt/vim-scala"]
+	path = roles/dotfiles/files/vim/pack/vendor/opt/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/opt/vimtex"]
+	path = roles/dotfiles/files/vim/pack/vendor/opt/vimtex
+	url = https://github.com/lervag/vimtex.git

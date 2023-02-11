@@ -1,0 +1,10 @@
+---
+- name: Homebrew
+  include_tasks: homebrew.yml
+
+- name: SDKMAN!
+  include_tasks: sdkman.yml
+
+- name: Dotfiles
+  include_tasks: dotfiles.yml
+

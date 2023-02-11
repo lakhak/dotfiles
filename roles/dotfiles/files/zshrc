@@ -1,0 +1,33 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git pass fzf ripgrep)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export LANG=en_GB.UTF-8
+
+alias env='env | sort'
+alias fzal='alias | fzf'
+alias fzp='pass fzf'
+alias fzpc='pass fzf -c'
+alias mvno='mvn -o'
+
+export PATH="$HOME/.cargo/bin:\
+/usr/local/opt/vim/bin:\
+/usr/local/opt/node@14/bin:\
+/usr/local/opt/openssl@1.1/bin:\
+/usr/local/sbin:$PATH"
+
+export EDITOR="vim"
+
+export PASSWORD_STORE_DIR="$HOME/.password-store"
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
