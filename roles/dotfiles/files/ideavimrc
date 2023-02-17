@@ -5,6 +5,7 @@
 set surround
 set commentary
 set easymotion
+set multicursor
 
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
@@ -16,13 +17,16 @@ set incsearch
 
 set number
 set rnu
+set showmode
+set ideajoin
+set ideamarks
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
 
 """ Plugin settings
-map <leader>s <Plug>(easymotion-s1)
+map <leader>s <Plug>(easymotion-s2)
 map <leader>l <Plug>(easymotion-sl)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
