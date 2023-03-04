@@ -49,3 +49,6 @@
 [submodule "roles/dotfiles/files/vim/pack/vendor/opt/vimtex"]
 	path = roles/dotfiles/files/vim/pack/vendor/opt/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule "roles/dotfiles/files/vim/pack/colors/opt/gruvbox"]
+	path = roles/dotfiles/files/vim/pack/colors/opt/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
