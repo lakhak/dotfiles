@@ -52,3 +52,6 @@
 [submodule "roles/dotfiles/files/vim/pack/colors/opt/gruvbox"]
 	path = roles/dotfiles/files/vim/pack/colors/opt/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank
+	url = https://github.com/machakann/vim-highlightedyank.git

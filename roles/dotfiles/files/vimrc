@@ -70,6 +70,10 @@ let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 
+" vim-highlightedyank
+let g:highlightedyank_highlight_duration = 500
+let g:highlightedyank_highlight_in_visual = 0
+
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
 map <Leader>f <Plug>(easymotion-f)
 map <Leader>b <Plug>(easymotion-b)

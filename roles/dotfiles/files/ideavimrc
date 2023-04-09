@@ -6,6 +6,7 @@ set surround
 set commentary
 set easymotion
 set multicursor
+set highlightedyank
 
 "" -- Suggested options --
 " Show a few lines of context around the cursor. Note that this makes the
@@ -20,6 +21,8 @@ set rnu
 set showmode
 set ideajoin
 set ideamarks
+
+let g:highlightedyank_highlight_duration = "500"
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -36,6 +39,7 @@ map <leader>k <Plug>(easymotion-k)
 map <leader>r <Action>(Run)
 map <leader>R <Action>(RunClass)
 map <leader>d <Action>(Debug)
+map <leader>D <Action>(DebugClass)
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
