@@ -41,6 +41,10 @@ set number
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END
 
+" enable mouse support
+set mouse=nvi
+set ttymouse=sgr
+
 " Custom commands
 :command Glog :Git log --oneline --decorate --graph
 
