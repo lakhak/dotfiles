@@ -50,12 +50,12 @@ set ttymouse=sgr
 
 " FZF
 set rtp+=/usr/local/opt/fzf
-nnoremap <C-p>o :FZF<CR>
-nnoremap <C-p>w :Windows<CR>
-nnoremap <C-p>: :History:<CR>
-nnoremap <C-p>/ :History/<CR>
-nnoremap <C-p>g :Rg<CR>
-nnoremap <C-p>* :Rg <C-r><C-w><CR>
+nnoremap <C-p><C-p> :FZF<CR>
+nnoremap <C-p>w     :Windows<CR>
+nnoremap <C-p>:     :History:<CR>
+nnoremap <C-p>/     :History/<CR>
+nnoremap <C-p>g     :Rg<CR>
+nnoremap <C-p>*     :Rg <C-r><C-w><CR>
 
 " NERDTree
 map <C-g> :NERDTreeToggle<CR>

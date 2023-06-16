@@ -41,6 +41,7 @@ map <leader>R <Action>(RunClass)
 map <leader>d <Action>(Debug)
 map <leader>D <Action>(DebugClass)
 map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>2 <Action>(GotoNextError)
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
 
