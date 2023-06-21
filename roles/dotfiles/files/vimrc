@@ -1,12 +1,18 @@
 syntax on
 filetype plugin indent on
 
-packadd! edge
-
+set encoding=utf-8
 set backspace=indent,eol,start
 set nofoldenable
+set ttimeoutlen=100 " reduce delay (ms) when switching modes
+
+" enable mouse support
+set mouse=nvi
+set ttymouse=sgr
 
 " set theme
+packadd! edge
+
 if has('termguicolors')
   set termguicolors
 endif
@@ -19,8 +25,6 @@ let g:edge_diagnostic_line_highlight = 1
 let g:airline_theme = 'edge'
 
 colorscheme edge
-
-set ttimeoutlen=100 " reduce delay (ms) when switching modes
 
 " set cursor shape
 if exists ('$TMUX')
@@ -41,10 +45,6 @@ set number
 :  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 :augroup END
 
-" enable mouse support
-set mouse=nvi
-set ttymouse=sgr
-
 " Custom commands
 :command Glog :Git log --oneline --decorate --graph
 
@@ -61,10 +61,6 @@ nnoremap <C-p>*     :Rg <C-r><C-w><CR>
 map <C-g> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
 
-" YouCompleteMe
-nnoremap <leader>D :YcmCompleter GetDoc<CR>
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-
 " vim-visual-multi
 let g:VM_maps = {}
 let g:VM_maps["Add Cursor Down"] = '<C-j>'
@@ -74,13 +70,13 @@ let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 
-" vim-highlightedyank
-let g:highlightedyank_highlight_duration = 500
-let g:highlightedyank_highlight_in_visual = 0
-
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
 map <Leader>f <Plug>(easymotion-f)
 map <Leader>b <Plug>(easymotion-b)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" vim-highlightedyank
+let g:highlightedyank_highlight_duration = 500
+let g:highlightedyank_highlight_in_visual = 0
 
