@@ -58,3 +58,6 @@
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-devicons"]
 	path = roles/dotfiles/files/vim/pack/vendor/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/ale.git"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/ale.git
+	url = https://github.com/dense-analysis/ale.git

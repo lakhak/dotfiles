@@ -7,4 +7,3 @@
   when: lookup('env', 'SDKMAN_DIR') is defined
   register: sdkman_install
   changed_when: "'is already installed' not in sdkman_install.stdout"
-

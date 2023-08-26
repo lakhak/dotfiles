@@ -80,3 +80,7 @@ map <Leader>k <Plug>(easymotion-k)
 let g:highlightedyank_highlight_duration = 500
 let g:highlightedyank_highlight_in_visual = 0
 
+" ALE
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_disable_lsp = 1
+let g:airline#extensions#ale#enabled = 1

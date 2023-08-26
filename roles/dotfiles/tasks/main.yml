@@ -7,4 +7,3 @@
 
 - name: Dotfiles
   include_tasks: dotfiles.yml
-

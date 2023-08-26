@@ -15,4 +15,3 @@
 - name: Change default shell
   command: chsh -s {{ default_shell }}
   when: lookup('env', 'SHELL') != default_shell
-
