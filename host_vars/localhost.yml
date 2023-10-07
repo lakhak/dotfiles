@@ -9,12 +9,12 @@ homebrew_formulas:
   - fzf
   - gpgme
   - jq
-  - node@14
   - pandoc
   - pass
   - pwgen
   - ripgrep
   - tmux
+  - vagrant-completion
   - vim
   - wget
   - zsh
@@ -28,12 +28,14 @@ homebrew_casks:
   - basictex
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
+  - hashicorp-vagrant
   - little-snitch
   - macfuse
   - micro-snitch
   - rectangle
   - tex-live-utility
   - veracrypt
+  - virtualbox
 
 dotfiles:
   - { src: alacritty, dest: config/alacritty }
