@@ -20,6 +20,7 @@ alias mvno='mvn -o'
 export PATH="$HOME/.cargo/bin:\
 /usr/local/opt/vim/bin:\
 /usr/local/opt/openssl@1.1/bin:\
+/usr/local/opt/node@18/bin:\
 /usr/local/sbin:$PATH"
 
 export EDITOR="vim"

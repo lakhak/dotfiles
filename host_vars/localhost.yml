@@ -9,12 +9,12 @@ homebrew_formulas:
   - fzf
   - gpgme
   - jq
+  - node@18
   - pandoc
   - pass
   - pwgen
   - ripgrep
   - tmux
-  - vagrant-completion
   - vim
   - wget
   - zsh
@@ -48,9 +48,10 @@ dotfiles:
   - { src: zshrc }
 
 sdkman_sdks:
-  - { sdk: java, version: 8.0.352-tem }
-  - { sdk: java, version: 11.0.17-tem }
-  - { sdk: java, version: 17.0.5-tem }
+  - { sdk: java, version: 8.0.382-tem }
+  - { sdk: java, version: 11.0.21-tem }
+  - { sdk: java, version: 17.0.8-tem }
+  - { sdk: java, version: 21-tem }
   - { sdk: maven, version: 3.6.3 }
   - { sdk: sbt, version: 1.4.7 }
   - { sdk: visualvm, version: 2.1.2 }
