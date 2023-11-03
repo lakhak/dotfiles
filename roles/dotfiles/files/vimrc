@@ -17,7 +17,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
+set background=light
 
 let g:edge_style = 'neon'
 let g:edge_better_performance = 1
