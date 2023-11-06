@@ -16,6 +16,7 @@ alias fzal='alias | fzf'
 alias fzp='pass fzf'
 alias fzpc='pass fzf -c'
 alias mvno='mvn -o'
+alias dotfl='dotf light'
 
 export PATH="$HOME/.cargo/bin:\
 /usr/local/opt/vim/bin:\
