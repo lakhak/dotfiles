@@ -1,4 +1,4 @@
-import = ["/Users/krishan/.config/alacritty/themes/edge_dark.toml"]
+import = ["/Users/krishan/.config/alacritty/themes/edge_light.toml"]
 
 [font]
 size = 12.0
