@@ -12,6 +12,22 @@
     force: yes
   with_items: "{{ dotfiles }}"
 
-- name: Change default shell
-  command: chsh -s {{ default_shell }}
-  when: lookup('env', 'SHELL') != default_shell
+- name: Setup default shell
+  block:
+    - name: Check default shell in /etc/shells
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      check_mode: yes
+      register: etc_shells
+
+    - name: Add default shell to /etc/shells
+      become: yes
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      when: etc_shells.changed
+
+    - name: Change default shell
+      command: chsh -s {{ default_shell }}
+      when: lookup('env', 'SHELL') != default_shell

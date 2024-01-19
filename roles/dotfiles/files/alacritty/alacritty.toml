@@ -1,0 +1,45 @@
+import = ["/Users/krishan/.config/alacritty/themes/edge_dark.toml"]
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetbrainsMono Nerd Font Mono"
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0001"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0005"
+key = "Right"
+mods = "Command"
+
+[shell]
+args = ["new-session", "-A", "-D", "-s", "main"]
+program = "/usr/local/bin/tmux"
+
+[window]
+decorations = "buttonless"
+opacity = 0.999
+option_as_alt = "None"
+
+[window.padding]
+x = 18
+y = 15
