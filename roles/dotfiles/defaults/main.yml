@@ -5,3 +5,5 @@ homebrew_taps: []
 homebrew_casks: [ homebrew/cask ]
 dotfiles: []
 sdkman_sdks: []
+projects_dir: "{{ lookup('env', 'HOME') }}/Projects"
+git_repos: []
