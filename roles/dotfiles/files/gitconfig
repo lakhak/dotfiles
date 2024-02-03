@@ -1,6 +1,7 @@
 [user]
 	name = lakhak
 	email = lakhak@users.noreply.github.com
+	signingkey = 2D8E01D473210CCB!
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim

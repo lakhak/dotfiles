@@ -17,6 +17,7 @@ homebrew_formulas:
   - tmux
   - vim
   - wget
+  - ykman
   - zsh
 
 homebrew_taps:
