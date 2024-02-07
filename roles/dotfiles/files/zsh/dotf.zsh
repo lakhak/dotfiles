@@ -8,4 +8,6 @@ function dotf() {
 	fi
 
 	git --git-dir="${dotfiles_dir}/.git" --work-tree="${dotfiles_dir}" checkout $1 1> /dev/null
+	
+	tmux source-file ~/.tmux-statusline.conf
 }
