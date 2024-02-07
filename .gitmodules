@@ -49,9 +49,6 @@
 [submodule "roles/dotfiles/files/vim/pack/vendor/opt/vimtex"]
 	path = roles/dotfiles/files/vim/pack/vendor/opt/vimtex
 	url = https://github.com/lervag/vimtex.git
-[submodule "roles/dotfiles/files/vim/pack/colors/opt/gruvbox"]
-	path = roles/dotfiles/files/vim/pack/colors/opt/gruvbox
-	url = https://github.com/morhetz/gruvbox.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank"]
 	path = roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank
 	url = https://github.com/machakann/vim-highlightedyank.git
@@ -61,3 +58,6 @@
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/ale.git"]
 	path = roles/dotfiles/files/vim/pack/vendor/start/ale.git
 	url = https://github.com/dense-analysis/ale.git
+[submodule "roles/dotfiles/files/vim/pack/vendor/start/tmuxline.vim"]
+	path = roles/dotfiles/files/vim/pack/vendor/start/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git

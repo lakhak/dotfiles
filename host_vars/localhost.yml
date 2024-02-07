@@ -17,6 +17,7 @@ homebrew_formulas:
   - tmux
   - vim
   - wget
+  - ykman
   - zsh
 
 homebrew_taps:
@@ -43,6 +44,7 @@ dotfiles:
   - { src: gitignore_global }
   - { src: ideavimrc }
   - { src: tmux.conf }
+  - { src: tmux-statusline.conf }
   - { src: vim }
   - { src: vimrc }
   - { src: zshrc }
