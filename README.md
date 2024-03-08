@@ -8,7 +8,7 @@ Set of ansible playbooks for setting up local machine including:
 
 To setup:
 
-1. `virtualenv dotfiles`
+1. `python3 -m venv .`
 2. `source bin/activate`
 3. `pip install -r requirements.txt`
 
