@@ -1,16 +1,23 @@
 ---
-- name: Create .config directory
+- name: Create dotfiles
   file:
-    dest: "{{ lookup('env', 'HOME') }}/.config"
-    state: directory
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest }}"
+    state: "{{ item.state }}"
+  with_items: "{{ dotfiles.files }}"
 
-- name: Copy dotfiles
+- name: Link dotfiles
   file:
     src: "{{ role_path }}/files/{{ item.src }}"
     dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
     state: link
     force: yes
-  with_items: "{{ dotfiles }}"
+  with_items: "{{ dotfiles.links }}"
+
+- name: Template dotfiles
+  template:
+    src: "{{ item.src }}.j2"
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+  with_items: "{{ dotfiles.templates }}"
 
 - name: Setup default shell
   block:

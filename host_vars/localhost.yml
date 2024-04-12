@@ -39,16 +39,20 @@ homebrew_casks:
   - virtualbox
 
 dotfiles:
-  - { src: alacritty, dest: config/alacritty }
-  - { src: gitconfig }
-  - { src: gitignore_global }
-  - { src: ideavimrc }
-  - { src: tmux.conf }
-  - { src: tmux-statusline.conf }
-  - { src: vim }
-  - { src: vimrc }
-  - { src: zshrc }
-  - { src: zsh/dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
+  files:
+    - { dest: config, state: directory }
+  links:
+    - { src: alacritty, dest: config/alacritty }
+    - { src: gitconfig }
+    - { src: gitignore_global }
+    - { src: ideavimrc }
+    - { src: tmux.conf }
+    - { src: tmux-statusline.conf }
+    - { src: vim }
+    - { src: vimrc }
+    - { src: zshrc }
+    - { src: zsh/dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
+  templates: []
 
 sdkman_sdks:
   - { sdk: java, version: 8.0.382-tem }
