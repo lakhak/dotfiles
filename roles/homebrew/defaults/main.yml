@@ -1,0 +1,5 @@
+---
+homebrew_prefix: "{{ lookup('pipe', 'brew --prefix') }}"
+homebrew_formulas: []
+homebrew_taps: []
+homebrew_casks: [ homebrew/cask ]

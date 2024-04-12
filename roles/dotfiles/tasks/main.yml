@@ -1,12 +1,33 @@
 ---
-- name: Homebrew
-  include_tasks: homebrew.yml
+- name: Create .config directory
+  file:
+    dest: "{{ lookup('env', 'HOME') }}/.config"
+    state: directory
 
-- name: SDKMAN!
-  include_tasks: sdkman.yml
+- name: Copy dotfiles
+  file:
+    src: "{{ role_path }}/files/{{ item.src }}"
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+    state: link
+    force: yes
+  with_items: "{{ dotfiles }}"
 
-- name: Dotfiles
-  include_tasks: dotfiles.yml
+- name: Setup default shell
+  block:
+    - name: Check default shell in /etc/shells
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      check_mode: yes
+      register: etc_shells
 
-- name: Projects
-  include_tasks: projects.yml
+    - name: Add default shell to /etc/shells
+      become: yes
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      when: etc_shells.changed
+
+    - name: Change default shell
+      command: chsh -s {{ default_shell }}
+      when: lookup('env', 'SHELL') != default_shell
