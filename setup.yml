@@ -1,6 +1,6 @@
 ---
 - name: Setup local machine
-  hosts: localhost
+  hosts: macbook-pro
   become: no
   roles:
     - homebrew
