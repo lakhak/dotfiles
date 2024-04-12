@@ -49,7 +49,7 @@ set number
 :command Glog :Git log --oneline --decorate --graph
 
 " FZF
-set rtp+=/usr/local/opt/fzf
+set rtp+={{ homebrew_prefix }}/opt/fzf
 nnoremap <C-p><C-p> :FZF<CR>
 nnoremap <C-p>w     :Windows<CR>
 nnoremap <C-p>:     :History:<CR>

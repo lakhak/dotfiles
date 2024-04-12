@@ -1,7 +1,9 @@
 [user]
-	name = lakhak
-	email = lakhak@users.noreply.github.com
-	signingkey = 2D8E01D473210CCB!
+	name = {{ git.user.name }}
+	email = {{ git.user.email }}
+{% if git.user.signingkey is defined %}
+	signingkey = {{ git.user.signingkey }}
+{% endif %}
 [core]
 	excludesfile = ~/.gitignore_global
 	editor = vim

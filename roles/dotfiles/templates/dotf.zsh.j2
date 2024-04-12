@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 function dotf() {
-	local dotfiles_dir="${HOME}/Projects/dotfiles"
+	local dotfiles_dir="{{ playbook_dir }}"
 
 	if [ -z "$1" ]; then
 		git --git-dir="${dotfiles_dir}/.git" --work-tree="${dotfiles_dir}" checkout main 1> /dev/null
