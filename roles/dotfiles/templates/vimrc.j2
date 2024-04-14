@@ -4,6 +4,9 @@ filetype plugin indent on
 set encoding=utf-8
 set backspace=indent,eol,start
 set nofoldenable
+set tabstop=4
+set shiftwidth=4
+set expandtab smarttab
 set ttimeoutlen=100 " reduce delay (ms) when switching modes
 
 " enable mouse support
@@ -49,7 +52,7 @@ set number
 :command Glog :Git log --oneline --decorate --graph
 
 " FZF
-set rtp+=/usr/local/opt/fzf
+set rtp+={{ homebrew_prefix }}/opt/fzf
 nnoremap <C-p><C-p> :FZF<CR>
 nnoremap <C-p>w     :Windows<CR>
 nnoremap <C-p>:     :History:<CR>
@@ -60,11 +63,6 @@ nnoremap <C-p>*     :Rg <C-r><C-w><CR>
 " NERDTree
 map <C-g> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=40
-
-" vim-visual-multi
-let g:VM_maps = {}
-let g:VM_maps["Add Cursor Down"] = '<C-j>'
-let g:VM_maps["Add Cursor Up"]   = '<C-k>'
 
 " vim-easymotion
 let g:EasyMotion_do_mapping = 0

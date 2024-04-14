@@ -3,7 +3,4 @@
   hosts: macbook-pro
   become: no
   roles:
-    - homebrew
-    - java
     - dotfiles
-    - projects

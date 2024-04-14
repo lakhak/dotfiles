@@ -1,5 +1,5 @@
 ---
-default_shell: /usr/local/bin/zsh
+default_shell: "{{ homebrew_prefix }}/bin/zsh"
 
 homebrew_formulas:
   - awscli
@@ -39,16 +39,28 @@ homebrew_casks:
   - virtualbox
 
 dotfiles:
-  - { src: alacritty, dest: config/alacritty }
-  - { src: gitconfig }
-  - { src: gitignore_global }
-  - { src: ideavimrc }
-  - { src: tmux.conf }
-  - { src: tmux-statusline.conf }
-  - { src: vim }
-  - { src: vimrc }
-  - { src: zshrc }
-  - { src: zsh/dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
+  files:
+    - { dest: config, state: directory }
+    - { dest: config/alacritty, state: directory }
+  links:
+    - { src: alacritty/themes, dest: config/alacritty/themes }
+    - { src: gitignore_global }
+    - { src: ideavimrc }
+    - { src: tmux-statusline.conf }
+    - { src: vim }
+  templates:
+    - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
+    - { src: gitconfig }
+    - { src: tmux.conf }
+    - { src: vimrc }
+    - { src: zshrc }
+    - { src: dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
+
+git:
+  user:
+    name: lakhak
+    email: lakhak@users.noreply.github.com
+    signingkey: 2D8E01D473210CCB!
 
 sdkman_sdks:
   - { sdk: java, version: 8.0.382-tem }

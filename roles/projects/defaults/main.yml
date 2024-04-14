@@ -1,0 +1,3 @@
+---
+projects_dir: "{{ lookup('env', 'HOME') }}/Projects"
+git_repos: []

@@ -1,12 +1,40 @@
 ---
-- name: Homebrew
-  include_tasks: homebrew.yml
+- name: Create dotfiles
+  file:
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest }}"
+    state: "{{ item.state }}"
+  with_items: "{{ dotfiles.files }}"
 
-- name: SDKMAN!
-  include_tasks: sdkman.yml
+- name: Link dotfiles
+  file:
+    src: "{{ role_path }}/files/{{ item.src }}"
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+    state: link
+    force: yes
+  with_items: "{{ dotfiles.links }}"
 
-- name: Dotfiles
-  include_tasks: dotfiles.yml
+- name: Template dotfiles
+  template:
+    src: "{{ item.src }}.j2"
+    dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+  with_items: "{{ dotfiles.templates }}"
 
-- name: Projects
-  include_tasks: projects.yml
+- name: Setup default shell
+  block:
+    - name: Check default shell in /etc/shells
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      check_mode: yes
+      register: etc_shells
+
+    - name: Add default shell to /etc/shells
+      become: yes
+      lineinfile:
+        path: /etc/shells
+        line: "{{ default_shell }}"
+      when: etc_shells.changed
+
+    - name: Change default shell
+      command: chsh -s {{ default_shell }}
+      when: lookup('env', 'SHELL') != default_shell
