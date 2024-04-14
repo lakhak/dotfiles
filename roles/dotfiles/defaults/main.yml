@@ -1,4 +1,5 @@
 ---
+homebrew_prefix: "{{ lookup('pipe', 'brew --prefix') }}"
 default_shell: /bin/zsh
 dotfiles:
   files: []

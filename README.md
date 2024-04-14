@@ -12,4 +12,5 @@ To setup:
 2. `source bin/activate`
 3. `pip install -r requirements.txt`
 
-To run the playbooks: `./install.sh`.
+To install dotfiles only: `./install.sh`.
+To install everything: `./install.sh all`.
