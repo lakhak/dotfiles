@@ -22,7 +22,6 @@ homebrew_formulas:
 
 homebrew_taps:
   - homebrew/cask
-  - homebrew/cask-fonts
 
 homebrew_casks:
   - alacritty
