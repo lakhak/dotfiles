@@ -7,6 +7,7 @@ homebrew_formulas:
   - docker
   - docker-credential-helper
   - fzf
+  - git # replace apple xcode git
   - gpgme
   - jq
   - node@18

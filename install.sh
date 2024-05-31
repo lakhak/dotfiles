@@ -1,19 +1,18 @@
 #!/usr/bin/env zsh
 
+script_dir="${0:A:h}"
+ansible_playbook_exec="$script_dir/bin/ansible-playbook"
+ansible_inventory="$script_dir/inventory.ini"
+
 function run_playbook() {
     case "$1" in
         all)
-            ansible-playbook -i inventory.ini setup.yml "${@:2}"
+            $ansible_playbook_exec -i "$ansible_inventory" "$script_dir/setup.yml" "${@:2}"
             ;;
         *)
-            ansible-playbook -i inventory.ini dotfiles.yml "$@"
+            $ansible_playbook_exec -i "$ansible_inventory" "$script_dir/dotfiles.yml" "$@"
             ;;
     esac
 }
 
-if [ -z "${VIRTUAL_ENV}" ]; then
-    source bin/activate && run_playbook "$@" && deactivate
-else
-    run_playbook "$@"
-fi
-
+run_playbook "$@"
