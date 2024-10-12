@@ -13,7 +13,6 @@ homebrew_formulas:
   - node@18
   - pandoc
   - pass
-  - pwgen
   - ripgrep
   - tmux
   - vim
