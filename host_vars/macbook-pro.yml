@@ -6,12 +6,13 @@ homebrew_formulas:
   - colima
   - docker
   - docker-credential-helper
+  - fuse-t
   - fzf
   - git # replace apple xcode git
   - gpgme
   - hashicorp/tap/hashicorp-vagrant
   - jq
-  - node@18
+  - node@22
   - pandoc
   - pass
   - ripgrep
@@ -23,6 +24,7 @@ homebrew_formulas:
 
 homebrew_taps:
   - hashicorp/tap
+  - macos-fuse-t/cask
 
 homebrew_casks:
   - alacritty
@@ -30,11 +32,9 @@ homebrew_casks:
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
   - little-snitch
-  - macfuse
   - micro-snitch
   - rectangle
   # - tex-live-utility
-  - veracrypt
   # - virtualbox
 
 dotfiles:

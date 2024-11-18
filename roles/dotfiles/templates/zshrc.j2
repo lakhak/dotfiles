@@ -18,11 +18,9 @@ alias fzpc='pass fzf -c'
 alias mvno='mvn -o'
 alias dotfl='dotf light'
 
-export PATH="$HOME/.cargo/bin:\
+export PATH="\
 {{ homebrew_prefix }}/sbin:\
-{{ homebrew_prefix }}/opt/vim/bin:\
-{{ homebrew_prefix }}/opt/openssl@1.1/bin:\
-{{ homebrew_prefix }}/opt/node@18/bin:$PATH"
+{{ homebrew_prefix }}/opt/node@22/bin:$PATH"
 
 export EDITOR="vim"
 
