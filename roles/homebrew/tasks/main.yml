@@ -9,7 +9,7 @@
   community.general.homebrew:
     name: "{{ item }}"
     state: present
-    update_homebrew: yes
+    update_homebrew: true
   with_items: "{{ homebrew_formulas }}"
 
 - name: Install casks via Homebrew

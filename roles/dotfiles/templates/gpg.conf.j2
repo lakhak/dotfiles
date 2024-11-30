@@ -1,0 +1,7 @@
+{% if gpg.conf.default_key is defined %}
+default-key {{ gpg.conf.default_key }}
+{% endif %}
+personal-cipher-preferences AES, AES192, AES256
+personal-digest-preferences SHA256, SHA384, SHA512
+keyid-format 0xlong
+with-fingerprint
