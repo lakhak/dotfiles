@@ -1,6 +1,6 @@
 ---
 - name: Setup local machine
   hosts: macbook-pro
-  become: no
+  become: false
   roles:
     - dotfiles

@@ -1,5 +1,6 @@
 # vim: filetype=toml:
 
+[general]
 import = ["~/.config/alacritty/themes/edge_light.toml"]
 
 [font]
@@ -33,7 +34,7 @@ chars = "\u0005"
 key = "Right"
 mods = "Command"
 
-[shell]
+[terminal.shell]
 args = ["new-session", "-A", "-D", "-s", "main"]
 program = "{{ homebrew_prefix }}/bin/tmux"
 

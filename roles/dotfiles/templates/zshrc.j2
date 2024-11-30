@@ -18,13 +18,12 @@ alias fzpc='pass fzf -c'
 alias mvno='mvn -o'
 alias dotfl='dotf light'
 
-export PATH="$HOME/.cargo/bin:\
+export PATH="\
 {{ homebrew_prefix }}/sbin:\
-{{ homebrew_prefix }}/opt/vim/bin:\
-{{ homebrew_prefix }}/opt/openssl@1.1/bin:\
-{{ homebrew_prefix }}/opt/node@18/bin:$PATH"
+{{ homebrew_prefix }}/opt/node@22/bin:$PATH"
 
 export EDITOR="vim"
+export GPG_TTY=$(tty)
 
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
@@ -32,3 +31,8 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.2/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)

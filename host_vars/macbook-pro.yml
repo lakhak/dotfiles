@@ -6,11 +6,13 @@ homebrew_formulas:
   - colima
   - docker
   - docker-credential-helper
+  - fuse-t
   - fzf
   - git # replace apple xcode git
   - gpgme
+  - hashicorp/tap/hashicorp-vagrant
   - jq
-  - node@18
+  - node@22
   - pandoc
   - pass
   - ripgrep
@@ -21,21 +23,19 @@ homebrew_formulas:
   - zsh
 
 homebrew_taps:
-  - homebrew/cask
+  - hashicorp/tap
+  - macos-fuse-t/cask
 
 homebrew_casks:
   - alacritty
-  - basictex
+  # - basictex
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
-  - hashicorp-vagrant
   - little-snitch
-  - macfuse
   - micro-snitch
   - rectangle
-  - tex-live-utility
-  - veracrypt
-  - virtualbox
+  # - tex-live-utility
+  # - virtualbox
 
 dotfiles:
   files:
@@ -50,6 +50,8 @@ dotfiles:
   templates:
     - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
     - { src: gitconfig }
+    - { src: gpg.conf, dest: gnupg/gpg.conf, backup: false }
+    - { src: gpg-agent.conf, dest: gnupg/gpg-agent.conf, backup: false }
     - { src: tmux.conf }
     - { src: vimrc }
     - { src: zshrc }
@@ -62,10 +64,9 @@ git:
     signingkey: 2D8E01D473210CCB!
 
 sdkman_sdks:
-  - { sdk: java, version: 8.0.382-tem }
-  - { sdk: java, version: 11.0.21-tem }
-  - { sdk: java, version: 17.0.8-tem }
-  - { sdk: java, version: 21-tem }
-  - { sdk: maven, version: 3.6.3 }
-  - { sdk: sbt, version: 1.4.7 }
-  - { sdk: visualvm, version: 2.1.2 }
+  - { sdk: java, version: 11.0.25-tem }
+  - { sdk: java, version: 17.0.13-tem }
+  - { sdk: java, version: 21.0.5-tem }
+  - { sdk: maven, version: 3.9.9 }
+  - { sdk: sbt, version: 1.10.5 }
+  - { sdk: visualvm, version: 2.1.10 }
