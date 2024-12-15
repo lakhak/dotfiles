@@ -11,4 +11,5 @@
   include_tasks: git_projects.yml
   loop: "{{ git_repos }}"
   loop_control:
+    label: "{{ git_repo.repo }}"
     loop_var: git_repo

@@ -63,6 +63,13 @@ git:
     email: lakhak@users.noreply.github.com
     signingkey: 2D8E01D473210CCB!
 
+git_repos:
+  - repo: git@github.com:lakhak/password-store.git
+    dest: "{{ lookup('env', 'HOME') }}/.password-store"
+    config:
+      - { name: pass.signcommits, value: 'true' }
+      - { name: commit.gpgsign, value: 'true' }
+
 sdkman_sdks:
   - { sdk: java, version: 11.0.25-tem }
   - { sdk: java, version: 17.0.13-tem }
