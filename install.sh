@@ -10,7 +10,7 @@ function run_playbook() {
             $ansible_playbook_exec -i "$ansible_inventory" "$script_dir/setup.yml" "${@:2}"
             ;;
         *)
-            $ansible_playbook_exec -i "$ansible_inventory" "$script_dir/dotfiles.yml" "$@"
+            $ansible_playbook_exec -i "$ansible_inventory" "$script_dir/setup.yml" --tags dotfiles "$@"
             ;;
     esac
 }

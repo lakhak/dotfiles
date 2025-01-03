@@ -20,7 +20,8 @@ alias dotfl='dotf light'
 
 export PATH="\
 {{ homebrew_prefix }}/sbin:\
-{{ homebrew_prefix }}/opt/node@22/bin:$PATH"
+{{ homebrew_prefix }}/opt/node@22/bin:\
+$PATH"
 
 export EDITOR="vim"
 export GPG_TTY=$(tty)

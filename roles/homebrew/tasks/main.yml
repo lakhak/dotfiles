@@ -1,19 +1,16 @@
 ---
 - name: Setup additional homebrew taps
   community.general.homebrew_tap:
-    name: "{{ item }}"
+    name: "{{ homebrew_taps }}"
     state: present
-  with_items: "{{ homebrew_taps }}"
 
 - name: Install packages via Homebrew
   community.general.homebrew:
-    name: "{{ item }}"
+    name: "{{ homebrew_formulas }}"
     state: present
-    update_homebrew: true
-  with_items: "{{ homebrew_formulas }}"
+    update_homebrew: false
 
 - name: Install casks via Homebrew
   community.general.homebrew_cask:
-    name: "{{ item }}"
+    name: "{{ homebrew_casks }}"
     state: present
-  with_items: "{{ homebrew_casks }}"

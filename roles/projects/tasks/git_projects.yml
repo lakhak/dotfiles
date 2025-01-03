@@ -1,0 +1,20 @@
+---
+- name: Clone {{ git_repo.repo }}
+  git:
+    repo: "{{ git_repo.repo }}"
+    dest: "{{ git_repo.dest | default(default_dest) }}"
+    version: "{{ git_repo.version | default('HEAD') }}"
+    force: false
+    update: false
+
+- name: Configure {{ project_dir }}
+  git_config:
+    scope: local
+    repo: "{{ git_repo.dest | default(default_dest) }}"
+    name: "{{ gitconfig.name }}"
+    value: "{{ gitconfig.value }}"
+    state: "{{ gitconfig.state | default('present') }}"
+  loop: "{{ git_repo.config }}"
+  loop_control:
+    loop_var: gitconfig
+  when: git_repo.config is defined
