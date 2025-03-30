@@ -1,6 +1,4 @@
 ---
-default_shell: "{{ homebrew_prefix }}/bin/zsh"
-
 homebrew_formulas:
   - awscli
   - colima
@@ -20,7 +18,6 @@ homebrew_formulas:
   - vim
   - wget
   - ykman
-  - zsh
 
 homebrew_taps:
   - hashicorp/tap
