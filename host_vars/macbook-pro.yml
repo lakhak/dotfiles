@@ -47,8 +47,8 @@ dotfiles:
   templates:
     - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
     - { src: gitconfig }
-    - { src: gpg.conf, dest: gnupg/gpg.conf, backup: false }
-    - { src: gpg-agent.conf, dest: gnupg/gpg-agent.conf, backup: false }
+    - { src: gpg.conf, dest: gnupg/gpg.conf }
+    - { src: gpg-agent.conf, dest: gnupg/gpg-agent.conf }
     - { src: tmux.conf }
     - { src: vimrc }
     - { src: zshrc }

@@ -17,7 +17,7 @@
   template:
     src: "{{ item.src }}.j2"
     dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
-    backup: "{{ item.backup | default(true) }}"
+    backup: "{{ item.backup | default(false) }}"
   with_items: "{{ dotfiles.templates }}"
 
 - name: Setup default shell
