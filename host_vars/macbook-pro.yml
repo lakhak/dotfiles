@@ -1,9 +1,6 @@
 ---
 homebrew_formulas:
   - awscli
-  - colima
-  - docker
-  - docker-credential-helper
   - fuse-t
   - fzf
   - git # replace apple xcode git
@@ -30,6 +27,7 @@ homebrew_casks:
   - font-jetbrains-mono-nerd-font
   - little-snitch
   - micro-snitch
+  - podman-desktop
   - rectangle
   # - tex-live-utility
   # - virtualbox
