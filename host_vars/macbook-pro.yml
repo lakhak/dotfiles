@@ -4,12 +4,13 @@ homebrew_formulas:
   - fuse-t
   - fzf
   - git # replace apple xcode git
-  - gpgme
+  - gnupg
   - hashicorp/tap/hashicorp-vagrant
   - jq
   - node@22
   - pandoc
   - pass
+  - pinentry-mac
   - ripgrep
   - tmux
   - vim
@@ -72,3 +73,9 @@ sdkman_sdks:
   - { sdk: maven, version: 3.9.9 }
   - { sdk: sbt, version: 1.10.5 }
   - { sdk: visualvm, version: 2.1.10 }
+
+macos_defaults:
+  - domain: org.gpgtools.common
+    key: UseKeychain
+    type: string
+    value: 'NO'
