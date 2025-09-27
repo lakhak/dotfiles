@@ -1,0 +1,41 @@
+---
+dotfiles:
+  files:
+    - { dest: config, state: directory }
+    - { dest: config/alacritty, state: directory }
+  links:
+    - { src: alacritty/themes, dest: config/alacritty/themes }
+    - { src: gitignore_global }
+    - { src: ideavimrc }
+    - { src: tmux-statusline.conf }
+    - { src: vim }
+  templates:
+    - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
+    - { src: gitconfig }
+    - { src: gpg.conf, dest: gnupg/gpg.conf }
+    - { src: gpg-agent.conf, dest: gnupg/gpg-agent.conf }
+    - { src: tmux.conf }
+    - { src: vimrc }
+    - { src: zshrc }
+    - { src: dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
+
+git:
+  user:
+    name: lakhak
+    email: lakhak@users.noreply.github.com
+    signingkey: 2D8E01D473210CCB!
+
+git_repos:
+  - repo: git@github.com:lakhak/password-store.git
+    dest: "{{ lookup('env', 'HOME') }}/.password-store"
+    config:
+      - { name: pass.signcommits, value: 'true' }
+      - { name: commit.gpgsign, value: 'true' }
+
+sdkman_sdks:
+  - { sdk: java, version: 11.0.25-tem }
+  - { sdk: java, version: 17.0.13-tem }
+  - { sdk: java, version: 21.0.5-tem }
+  - { sdk: maven, version: 3.9.9 }
+  - { sdk: sbt, version: 1.10.5 }
+  - { sdk: visualvm, version: 2.1.10 }

@@ -1,11 +1,8 @@
 ---
 homebrew_formulas:
   - awscli
-  - fuse-t
   - fzf
-  - git # replace apple xcode git
-  - gnupg
-  - hashicorp/tap/hashicorp-vagrant
+  - git
   - jq
   - node@22
   - pandoc
@@ -19,16 +16,15 @@ homebrew_formulas:
 
 homebrew_taps:
   - hashicorp/tap
-  - macos-fuse-t/cask
 
 homebrew_casks:
   - alacritty
-  # - basictex
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
-  - little-snitch
+  - hashicorp-vagrant
+  - little-snitch@5
+  - macfuse
   - micro-snitch
   - podman-desktop
   - rectangle
-  # - tex-live-utility
-  # - virtualbox
+  - veracrypt
