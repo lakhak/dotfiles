@@ -1,0 +1,6 @@
+---
+macos_defaults:
+  - domain: org.gpgtools.common
+    key: UseKeychain
+    type: string
+    value: 'NO'

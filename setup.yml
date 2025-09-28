@@ -1,8 +1,9 @@
 ---
 - name: Setup local machine
-  hosts: macbook-pro
+  hosts: localhost
   become: false
   roles:
+    - { role: macos, tags: [macos] }
     - { role: homebrew, tags: [homebrew, brew] }
     - { role: java, tags: [java] }
     - { role: dotfiles, tags: [dotfiles] }
