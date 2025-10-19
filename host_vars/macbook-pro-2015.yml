@@ -22,9 +22,10 @@ homebrew_casks:
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
   - hashicorp-vagrant
-  - little-snitch@5
+  - little-snitch
   - macfuse
   - micro-snitch
   - podman-desktop
   - rectangle
   - veracrypt
+  - yubico-authenticator
