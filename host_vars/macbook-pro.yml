@@ -31,4 +31,5 @@ homebrew_casks:
   - podman-desktop
   - rectangle
   # - tex-live-utility
+  - veracrypt-fuse-t
   # - virtualbox
