@@ -19,13 +19,13 @@ homebrew_formulas:
 
 homebrew_taps:
   - hashicorp/tap
-  - macos-fuse-t/cask
 
 homebrew_casks:
   - alacritty
   # - basictex
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
+  - fuse-t
   - little-snitch
   - micro-snitch
   - podman-desktop
