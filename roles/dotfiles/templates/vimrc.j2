@@ -20,7 +20,11 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
+if exists('$VIM_BG') && $VIM_BG =~# '_light$'
+  set background=light
+else
+  set background=dark
+endif
 
 let g:edge_style = 'neon'
 let g:edge_better_performance = 1

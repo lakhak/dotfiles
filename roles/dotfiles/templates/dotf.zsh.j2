@@ -1,14 +1,19 @@
 #!/usr/bin/env zsh
 
 function dotf() {
-    local dotfiles_dir="{{ playbook_dir }}"
+    local dotfiles_dir="{{ playbook_dir }}/roles/dotfiles/files"
 
     if [ -z "$1" ]; then
-        git --git-dir="${dotfiles_dir}/.git" --work-tree="${dotfiles_dir}" checkout main 1> /dev/null
+        local theme="edge_dark"
+    else
+        local theme="$1"
     fi
 
-    git --git-dir="${dotfiles_dir}/.git" --work-tree="${dotfiles_dir}" checkout $1 1> /dev/null
+    ln -sf $dotfiles_dir/alacritty/themes/$theme.toml ~/.config/alacritty/theme_current.toml
+    ln -sf $dotfiles_dir/tmux/themes/tmux-statusline-$theme.conf ~/.config/tmux/tmux-statusline.conf
 
-    $dotfiles_dir/install.sh > /dev/null
-    tmux source-file ~/.tmux-statusline.conf
+    tmux set-environment -g VIM_BG "$theme"
+    tmux source-file ~/.config/tmux/tmux-statusline.conf
+
+    export VIM_BG="$theme"
 }

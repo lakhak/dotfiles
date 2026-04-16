@@ -3,18 +3,19 @@ dotfiles:
   files:
     - { dest: config, state: directory }
     - { dest: config/alacritty, state: directory }
+    - { dest: config/tmux, state: directory }
   links:
-    - { src: alacritty/themes, dest: config/alacritty/themes }
+    - { src: alacritty/themes/edge_dark.toml, dest: config/alacritty/theme_current.toml }
     - { src: gitignore_global }
     - { src: ideavimrc }
-    - { src: tmux-statusline.conf }
+    - { src: tmux/themes/tmux-statusline-edge_dark.conf, dest: config/tmux/tmux-statusline.conf }
     - { src: vim }
   templates:
     - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
     - { src: gitconfig }
     - { src: gpg.conf, dest: gnupg/gpg.conf }
     - { src: gpg-agent.conf, dest: gnupg/gpg-agent.conf }
-    - { src: tmux.conf }
+    - { src: tmux.conf, dest: config/tmux/tmux.conf }
     - { src: vimrc }
     - { src: zshrc }
     - { src: dotf.zsh, dest: oh-my-zsh/custom/dotf.zsh }
