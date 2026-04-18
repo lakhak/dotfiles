@@ -14,7 +14,7 @@
 	path = roles/dotfiles/files/vim/pack/vendor/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/goyo.vim"]
-	path = roles/dotfiles/files/vim/pack/vendor/start/goyo.vim
+	path = roles/dotfiles/files/vim/pack/vendor/opt/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-easymotion"]
 	path = roles/dotfiles/files/vim/pack/vendor/start/vim-easymotion
@@ -53,8 +53,8 @@
 	path = roles/dotfiles/files/vim/pack/vendor/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/ale.git"]
-	path = roles/dotfiles/files/vim/pack/vendor/start/ale.git
+	path = roles/dotfiles/files/vim/pack/vendor/opt/ale.git
 	url = https://github.com/dense-analysis/ale.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/tmuxline.vim"]
-	path = roles/dotfiles/files/vim/pack/vendor/start/tmuxline.vim
+	path = roles/dotfiles/files/vim/pack/vendor/opt/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
