@@ -2,11 +2,17 @@
 
 function dotf() {
     local dotfiles_dir="{{ playbook_dir }}/roles/dotfiles/files"
+    local theme;
 
     if [ -z "$1" ]; then
-        local theme="edge_dark"
+        local interface_style="$(defaults read -g AppleInterfaceStyle 2>/dev/null)"
+        if [ "$interface_style" = "Dark" ]; then
+            theme="edge_dark"
+        else
+            theme="edge_light"
+        fi
     else
-        local theme="$1"
+        theme="$1"
     fi
 
     ln -sf $dotfiles_dir/alacritty/themes/$theme.toml ~/.config/alacritty/theme_current.toml
