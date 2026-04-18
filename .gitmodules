@@ -37,9 +37,6 @@
 [submodule "roles/dotfiles/files/vim/pack/colors/opt/edge"]
 	path = roles/dotfiles/files/vim/pack/colors/opt/edge
 	url = https://github.com/sainnhe/edge.git
-[submodule "roles/dotfiles/files/vim/pack/colors/opt/vim-colors-solarized"]
-	path = roles/dotfiles/files/vim/pack/colors/opt/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/opt/typescript-vim"]
 	path = roles/dotfiles/files/vim/pack/vendor/opt/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
