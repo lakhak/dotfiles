@@ -1,14 +1,16 @@
 ---
-- name: Create dotfiles
+- name: Create directories
   file:
     dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest }}"
-    state: "{{ item.state }}"
-  with_items: "{{ dotfiles.files }}"
+    state: directory
+    mode: "{{ item.mode | default('700') }}"
+  with_items: "{{ dotfiles.directories }}"
 
 - name: Link dotfiles
   file:
     src: "{{ role_path }}/files/{{ item.src }}"
     dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+    mode: "{{ item.mode | default('600') }}"
     state: link
     force: true
   with_items: "{{ dotfiles.links }}"
@@ -17,6 +19,7 @@
   template:
     src: "{{ item.src }}.j2"
     dest: "{{ lookup('env', 'HOME') }}/.{{ item.dest | default(item.src) }}"
+    mode: "{{ item.mode | default('600') }}"
     backup: "{{ item.backup | default(false) }}"
   with_items: "{{ dotfiles.templates }}"
 

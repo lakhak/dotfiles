@@ -18,3 +18,10 @@
   loop_control:
     loop_var: gitconfig
   when: git_repo.config is defined
+
+- name: Set permissions on {{ project_dir }}
+  file:
+    dest: "{{ git_repo.dest | default(default_dest) }}"
+    state: directory
+    mode: "{{ git_repo.mode }}"
+  when: git_repo.mode is defined

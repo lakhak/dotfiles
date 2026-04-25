@@ -1,15 +1,16 @@
 ---
 dotfiles:
-  files:
-    - { dest: config, state: directory }
-    - { dest: config/alacritty, state: directory }
-    - { dest: config/tmux, state: directory }
+  directories:
+    - { dest: config }
+    - { dest: config/alacritty }
+    - { dest: config/tmux }
+    - { dest: gnupg }
   links:
     - { src: alacritty/themes/edge_dark.toml, dest: config/alacritty/theme_current.toml }
     - { src: gitignore_global }
     - { src: ideavimrc }
     - { src: tmux/themes/tmux-statusline-edge_dark.conf, dest: config/tmux/tmux-statusline.conf }
-    - { src: vim }
+    - { src: vim, mode: '700' }
   templates:
     - { src: alacritty.toml, dest: config/alacritty/alacritty.toml }
     - { src: gitconfig }
@@ -29,6 +30,7 @@ git:
 git_repos:
   - repo: git@github.com:lakhak/password-store.git
     dest: "{{ lookup('env', 'HOME') }}/.password-store"
+    mode: '700'
     config:
       - { name: pass.signcommits, value: 'true' }
       - { name: commit.gpgsign, value: 'true' }
