@@ -26,6 +26,8 @@ The following one-time commands should be run in the project directory before ex
 To install dotfiles only: `./install.sh`. 
 To install everything: `./install.sh all`.
 
+If running for the first time also specify the host to target, for example `./install.sh macbook-pro all`. The host is not required on subsequent calls.
+
 The `install.sh` script in turn executes `ansible-playbook` - additional arguments to ansible can be provided from `install.sh`. 
 For example to provide the password for privilege escalation (see [Privilege escalation](#privilege-escalation)) run `./install.sh -K`.
 
