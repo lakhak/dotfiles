@@ -23,19 +23,23 @@ The following one-time commands should be run in the project directory before ex
 
 ## Install
 
-To install dotfiles only: `./install.sh`. 
-To install everything: `./install.sh all`.
+To install dotfiles only: `./install.sh`.  To install everything: `./install.sh all`.
 
-If running for the first time also specify the host to target, for example `./install.sh macbook-pro all`. The host is not required on subsequent calls.
+If running for the first time also specify the host to target, for example `./install.sh macbook-pro all`. The host is
+not required on subsequent calls.
 
-The `install.sh` script in turn executes `ansible-playbook` - additional arguments to ansible can be provided from `install.sh`. 
-For example to provide the password for privilege escalation (see [Privilege escalation](#privilege-escalation)) run `./install.sh -K`.
+The `install.sh` script in turn executes `ansible-playbook` - additional arguments to ansible can be provided from
+`install.sh`.  For example to provide the password for privilege escalation (see [Privilege
+escalation](#privilege-escalation)) run `./install.sh -K`.
 
 ## Privilege escalation
 
-For the most part the playbooks can be run without requiring any admin privileges. The exceptions to this are documented below.
+For the most part the playbooks can be run without requiring any admin privileges. The exceptions to this are documented
+below.
 
 ### Configuring shell environment
 
-If the value for `default_shell` is not present in `/etc/shells` the playbook attempts to add it and execute `chsh`, requiring the script to be called with `-K` flag and BECOME password to be provided. 
-Unless this is different from the default (`/bin/zsh` since macOS Catalina [source](https://support.apple.com/en-us/102360)) then this can be ignored as the task should be skipped anyway.
+If the value for `default_shell` is not present in `/etc/shells` the playbook attempts to add it and execute `chsh`,
+requiring the script to be called with `-K` flag and BECOME password to be provided.  Unless this is different from the
+default (`/bin/zsh` since macOS Catalina [source](https://support.apple.com/en-us/102360)) then this can be ignored as
+the task should be skipped anyway.
