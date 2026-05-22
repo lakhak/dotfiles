@@ -25,6 +25,7 @@ homebrew_casks:
   # - basictex
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
+  - font-powerline-symbols
   - fuse-t
   - little-snitch
   - micro-snitch

@@ -21,6 +21,7 @@ homebrew_casks:
   - alacritty
   - font-jetbrains-mono
   - font-jetbrains-mono-nerd-font
+  - font-powerline-symbols
   - hashicorp-vagrant
   - little-snitch
   - macfuse
