@@ -44,7 +44,7 @@
 	path = roles/dotfiles/files/vim/pack/vendor/opt/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/opt/vimtex"]
-	path = roles/dotfiles/files/vim/pack/vendor/opt/vimtex
+	path = roles/dotfiles/files/vim/pack/vendor/start/vimtex
 	url = https://github.com/lervag/vimtex.git
 [submodule "roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank"]
 	path = roles/dotfiles/files/vim/pack/vendor/start/vim-highlightedyank

@@ -31,6 +31,7 @@ homebrew_casks:
   - micro-snitch
   - podman-desktop
   - rectangle
+  # - skim
   # - tex-live-utility
   - veracrypt-fuse-t
   # - virtualbox

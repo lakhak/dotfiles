@@ -9,6 +9,7 @@ dotfiles:
     - { src: alacritty/themes/edge_dark.toml, dest: config/alacritty/theme_current.toml }
     - { src: gitignore_global }
     - { src: ideavimrc }
+    - { src: latexmkrc }
     - { src: tmux/themes/tmux-statusline-edge_dark.conf, dest: config/tmux/tmux-statusline.conf }
     - { src: vim, mode: '700' }
   templates:
