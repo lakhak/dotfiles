@@ -15,6 +15,9 @@ set -ga terminal-overrides ",xterm-256color:RGB"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
 
+# Support for clickable hyperlinks (OSC 8 escape code)
+set -as terminal-features ',*:hyperlinks'
+
 set-environment -g LESS '-R -F --mouse --wheel-lines=3'
 
 bind '"' split-window -c "#{pane_current_path}"
