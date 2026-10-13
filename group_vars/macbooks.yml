@@ -1,5 +1,11 @@
 ---
 macos_defaults:
+  # Enable key repeating globally (disables holding key for accent menu)
+  - key: ApplePressAndHoldEnabled
+    type: bool
+    value: 'false'
+
+  # Disable prompt to save GPG passphrase to keychain
   - domain: org.gpgtools.common
     key: UseKeychain
     type: string

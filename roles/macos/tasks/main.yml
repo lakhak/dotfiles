@@ -1,7 +1,7 @@
 ---
 - name: Configure macOS user defaults
   community.general.osx_defaults:
-    domain: "{{ item.domain }}"
+    domain: "{{ item.domain | default('NSGlobalDomain') }}"
     key: "{{ item.key }}"
     type: "{{ item.type }}"
     value: "{{ item.value }}"
